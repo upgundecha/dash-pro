@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row" >
+        &nbsp;
+  </div>
+  <div class="row" >
+    <h2>Applications</h2>
+  </div>
+<br/>
+  <div class="row card-group">
+    <div class="col-4"  *ngFor="let application of applications">
+      <div class="card" style="width: 18rem;">
+        <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+        <div class="card-body">
+          <h5 class="card-title">{{application.name}}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary" routerLink="/dashboard/{{application.name}}" routerLinkActive="active" (click)="onSelect(application)">Dashboard</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
